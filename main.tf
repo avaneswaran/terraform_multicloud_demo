@@ -17,13 +17,14 @@ resource "aws_security_group" "demo_instance" {
   description = "Security group for demo EC2 instance"
   vpc_id      = var.vpc_id
 
-  ingress {
-    description = "SSH from corporate network"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = var.allowed_ssh_cidr
-  }
+ # Add this ingress rule to your security group
+ingress {
+  description = "SSH from EC2 Instance Connect"
+  from_port   = 22
+  to_port     = 22
+  protocol    = "tcp"
+  cidr_blocks = ["18.232.65.104/29"]  # EC2 Instance Connect range for us-east-1
+}
 
   ingress {
     description = "HTTP from anywhere"

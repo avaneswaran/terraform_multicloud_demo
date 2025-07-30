@@ -2,9 +2,9 @@
 
 # Infrastructure settings
 aws_region      = "us-east-1"
-vpc_id          = "vpc-12345678"
-subnet_id       = "subnet-87654321"
-key_pair_name   = "demo-keypair"
+vpc_id          = "vpc-f316c497"
+subnet_id       = "subnet-530b3d0a"
+key_pair_name   = "web1"
 allowed_ssh_cidr = ["10.0.0.0/8", "192.168.1.0/24"]
 
 # Business tags for cost allocation
