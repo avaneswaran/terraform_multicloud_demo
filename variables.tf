@@ -104,4 +104,10 @@ variable "ssh_public_key_path" {
   default     = "~/.ssh/id_rsa.pub"
 }
 
+variable "ssh_public_key_content" {
+  description = "Content of SSH public key for Azure VM"
+  type        = string
+  default   = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDKGUGy1rwWgtOMepxvZH+rwBqUCayKFtVj8KezQpOsAG5SvM1MAznveVIwDNEUdneEV7uCsb/AhR74TNuhrFBRXabhgXDFgo5k7hyA2pKwjIy4pGYeTydTmF1tfwroS/qwQWwYFQaFqCSmfVruLNQCTxcsD1/9sSBDY9mo0WKuQg8Cc3b7TxcMIMNqZC6uRkBQamUSo3Eb3Cn3/aKIe95jOgd/g7OQbswyETZ/fDyFZptx8UVtId8zE5XozvodUJ3KOk+V9BxNtGU3LEj5hJpKqqqBeeMkCQhnO1xwU49BmB5rTD18Od9szyB3O/BUJkme5xcOxYoa8bjQEBd6efbVj5Gpa3TaIpEYL5cL6yKliwHO4MAkJis42dZ/QnWKIuKmAyhe+LkVS+i5flSevY3NZBgMqRZCFBcUMzcfbcip9l6yKydcCjA+aF0D9OQ06YjTc6W9R5qHc8HT2Adc7/39pp+Jq5uxc8y3JdxJw45kZnkQAcqIYWFbR+Nyg6HaoEpiIQxvol5To3QBJyAPPtFP/K7+exbU2M2H9FPwLW0f8JcDnwyYr+NaKhyYHAQG2h5mstVbsOYK8rkGDPTqcQKLAnaDWVz5yBrL/gknb27IFTvtNJ9xIa0mLx+EXuU7peTqGLYJeJ4d3T5w+yIzLJeujXZGkrHH3mLDUYf6bfzk9w== scud1@DESKTOP-093MM5O"
+}
+
 # Keep all your existing AWS variables unchanged...
