@@ -1,4 +1,4 @@
-# terraform.tfvars.example - Sample values for quick demo
+# terraform.tfvars - Sample values for quick demo
 
 # Infrastructure settings
 aws_region      = "us-east-1"
@@ -17,3 +17,9 @@ business_unit   = "Digital Products"
 owner_email         = "devops-team@company.com"
 data_classification = "internal"
 backup_schedule     = "daily"
+
+# Azure settings
+azure_location        = "East US"
+azure_vm_size        = "Standard_B1s"
+azure_admin_username = "azureuser"
+ssh_public_key_path  = "C:/Users/scud1/.ssh/id_rsa.pub"

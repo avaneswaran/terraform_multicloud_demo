@@ -1,5 +1,3 @@
-# provider.tf - Provider requirements
-
 terraform {
   required_version = ">= 1.0"
   
@@ -7,6 +5,10 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.0"
+    }
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0"
     }
   }
 }
@@ -18,6 +20,11 @@ provider "aws" {
     tags = {
       TerraformManaged = "true"
       Source           = "interview-demo"
+      Cloud            = "AWS"
     }
   }
+}
+
+provider "azurerm" {
+  features {}
 }

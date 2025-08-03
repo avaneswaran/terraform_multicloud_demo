@@ -15,6 +15,7 @@ variable "instance_type" {
 variable "vpc_id" {
   description = "VPC ID for the instance"
   type        = string
+  default     = "vpc-f316c497"
 }
 
 variable "subnet_id" {
@@ -75,3 +76,32 @@ variable "backup_schedule" {
   type        = string
   default     = "daily"
 }
+
+# Add these Azure variables to your existing variables.tf
+
+# Azure configuration variables
+variable "azure_location" {
+  description = "Azure region for deployment"
+  type        = string
+  default     = "East US"
+}
+
+variable "azure_vm_size" {
+  description = "Azure VM size"
+  type        = string
+  default     = "Standard_B1s"
+}
+
+variable "azure_admin_username" {
+  description = "Admin username for Azure VM"
+  type        = string
+  default     = "azureuser"
+}
+
+variable "ssh_public_key_path" {
+  description = "Path to SSH public key for Azure VM"
+  type        = string
+  default     = "~/.ssh/id_rsa.pub"
+}
+
+# Keep all your existing AWS variables unchanged...
